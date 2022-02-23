@@ -5,18 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { InputFilterComponent } from './components/input-filter/input-filter.component';
-import { ListProductsComponent } from './components/list-products/list-products.component';
+import { ListBooksComponent } from './components/list-books/list-books.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BookService } from './services/book.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponentComponent,
     InputFilterComponent,
-    ListProductsComponent,
+    ListBooksComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule,HttpClientModule],
+  providers: [BookService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

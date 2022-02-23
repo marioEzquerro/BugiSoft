@@ -15,6 +15,8 @@ public class Startup
         services.AddSingleton<LibraryContext>(_ =>
             new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
+
+
         var mapperConfig = new MapperConfiguration(mc =>
         {
             mc.AddProfile(new BookProfile());
@@ -32,12 +34,20 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+
         }
         else
         {
             app.UseExceptionHandler("/Home/Error");
             app.UseHsts();
         }
+
+        app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
