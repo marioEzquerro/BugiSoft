@@ -1,0 +1,7 @@
+<input type="text" [formControl]="inputValue" />
+<label for="lol">Numero de likes: {{ likes }}</label>
+
+<app-list-products
+  [filter]="inputValue.value"
+  (likeEvent)="addLike()"
+></app-list-products>
