@@ -10,4 +10,26 @@ export class BookService {
   getBookData() : Observable<Book[]> {
     return this.http.get<Book[]>(environment.API_URL + 'books');
   }
+
+  postBookData(body : any) : Book {
+    let bodyData =new Book();
+    bodyData.isbn=body.bookISBN;
+    bodyData.name=body.bookName;
+    bodyData.pages=body.bookPages;
+    bodyData.publishDate= new Date();
+
+
+    let result =new Book();
+    this.http.post<Book>(environment.API_URL + 'books',bodyData)
+    .subscribe(
+      (response) => {                           
+        console.log('response received')
+        result = response;
+      },
+      (error) => {                            
+        console.error('error caught in component')
+      }
+    )
+    return result;
+  }
 }
