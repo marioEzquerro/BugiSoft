@@ -10,6 +10,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './services/book.service';
 import { CreateBookComponent } from './components/create-book/create-book.component';
+import { NgChartsModule } from 'ng2-charts';
+import { ChartComponent } from './pages/chart/chart.component';
+import { LineChartComponent } from './component/line-chart/line-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,11 @@ import { CreateBookComponent } from './components/create-book/create-book.compon
     InputFilterComponent,
     ListBooksComponent,
     CreateBookComponent,
+    ChartComponent,
+    LineChartComponent,
+    BarChartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule,HttpClientModule,NgChartsModule],
   providers: [BookService],
   bootstrap: [AppComponent],
 })

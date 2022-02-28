@@ -20,12 +20,14 @@ public class Startup
         var mapperConfig = new MapperConfiguration(mc =>
         {
             mc.AddProfile(new BookProfile());
+            mc.AddProfile(new FaltasProfile());
         });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
 
         services.AddSingleton<IBookService, BookService>();
+        services.AddSingleton<IFaltasService, FaltasService>();
 
     }
 
