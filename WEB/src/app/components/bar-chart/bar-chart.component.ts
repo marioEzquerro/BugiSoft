@@ -1,5 +1,3 @@
-
-
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
@@ -9,36 +7,46 @@ import { FaltasService } from '../services/faltas.service';
 @Component({
   selector: 'app-bar-chart',
   templateUrl: './bar-chart.component.html',
-  styleUrls: [ './bar-chart.component.css' ],
+  styleUrls: ['./bar-chart.component.css'],
 })
-export class BarChartComponent  implements OnInit {
+export class BarChartComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  constructor(private _service: FaltasService)
-  {}
-
+  constructor(private _service: FaltasService) {}
 
   ngOnInit(): void {
-    let  data : Faltas[] = [];
+    let data: Faltas[] = [];
 
-    this._service.getBookData().subscribe(x=> data=x);
+    this._service.getBookData().subscribe((x: any) => (data = x));
 
-    let chartData: [] = [];
+    let chartData = new Array(12);
 
-    for(var i=0; i<9; i++) {
-      chartData[0] = 1;
-    }
-
-    data.forEach(element => {
-        if (chartData[element.date.getMonth()]!=0)
-        {
-          chartData[element.date.getMonth()].
-        }
-      
+    data.forEach((element) => {
+      if (chartData[element.date.getMonth()] === undefined) {
+        chartData[element.date.getMonth()] = element.number;
+      } else {
+        chartData[element.date.getMonth()] += element.number;
+      }
     });
 
+    this.barChartData = {
+      labels: [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ],
+      datasets: [{ data: chartData, label: 'Faltas' }],
+    };
   }
-
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
@@ -46,32 +54,37 @@ export class BarChartComponent  implements OnInit {
     scales: {
       x: {},
       y: {
-        min: 10
-      }
+        min: 10,
+      },
     },
     plugins: {
       legend: {
         display: true,
       },
-    }
+    },
   };
   public barChartType: ChartType = 'bar';
 
-
-  public barChartData: ChartData<'bar'> = {
-    labels: [ '2006', '2007', '2008', '2009', '2010', '2011', '2012' ],
-    datasets: [
-      { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' },
-      { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
-    ]
-  };
+  public barChartData: ChartData<'bar'>;
 
   // events
-  public chartClicked({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+  public chartClicked({
+    event,
+    active,
+  }: {
+    event?: ChartEvent;
+    active?: {}[];
+  }): void {
     console.log(event, active);
   }
 
-  public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): void {
+  public chartHovered({
+    event,
+    active,
+  }: {
+    event?: ChartEvent;
+    active?: {}[];
+  }): void {
     console.log(event, active);
   }
 
@@ -84,7 +97,8 @@ export class BarChartComponent  implements OnInit {
       Math.round(Math.random() * 100),
       56,
       Math.round(Math.random() * 100),
-      40 ];
+      40,
+    ];
 
     this.chart?.update();
   }
