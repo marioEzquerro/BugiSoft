@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
-import { Faltas } from '../models/faltas.model';
-import { FaltasService } from '../services/faltas.service';
+import { Faltas } from 'src/app/models/faltas.model';
+import { FaltasService } from 'src/app/services/faltas.service';
+
 
 @Component({
   selector: 'app-bar-chart',
@@ -12,22 +13,26 @@ import { FaltasService } from '../services/faltas.service';
 export class BarChartComponent implements OnInit {
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  constructor(private _service: FaltasService) {}
+  constructor(private _service: FaltasService) {
+    this.barChartData={datasets: []};
+  }
 
   ngOnInit(): void {
-    let data: Faltas[] = [];
 
-    this._service.getBookData().subscribe((x: any) => (data = x));
+    this._service.getBookData().subscribe((x) => 
+    {
+      let chartData = new Array(12);
 
-    let chartData = new Array(12);
+      let currentMonth=-1;
+      x.forEach((element) => {
+        currentMonth= new Date(element.date).getMonth();
+        if (chartData[currentMonth] === undefined) {
+          chartData[currentMonth] = element.number;
+        } else {
+          chartData[currentMonth] += element.number;
+        }
+      });
 
-    data.forEach((element) => {
-      if (chartData[element.date.getMonth()] === undefined) {
-        chartData[element.date.getMonth()] = element.number;
-      } else {
-        chartData[element.date.getMonth()] += element.number;
-      }
-    });
 
     this.barChartData = {
       labels: [
@@ -46,6 +51,12 @@ export class BarChartComponent implements OnInit {
       ],
       datasets: [{ data: chartData, label: 'Faltas' }],
     };
+    });
+
+   
+
+    
+
   }
 
   public barChartOptions: ChartConfiguration['options'] = {
@@ -86,20 +97,5 @@ export class BarChartComponent implements OnInit {
     active?: {}[];
   }): void {
     console.log(event, active);
-  }
-
-  public randomize(): void {
-    // Only Change 3 values
-    this.barChartData.datasets[0].data = [
-      Math.round(Math.random() * 100),
-      59,
-      80,
-      Math.round(Math.random() * 100),
-      56,
-      Math.round(Math.random() * 100),
-      40,
-    ];
-
-    this.chart?.update();
   }
 }
