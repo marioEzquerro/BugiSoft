@@ -1,3 +1,6 @@
+/// <summary>
+/// Base DTO of the book, used in creation
+/// </summary>
 public class BaseBookDTO
 {
     public string ISBN { get; set; }

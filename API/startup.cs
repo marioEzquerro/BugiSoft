@@ -15,7 +15,7 @@ public class Startup
         services.AddSingleton<LibraryContext>(_ =>
             new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-
+        services.AddSwaggerGen();
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
@@ -36,6 +36,8 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
         }
         else

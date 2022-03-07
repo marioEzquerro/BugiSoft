@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.JsonPatch;
 
+/// <summary>
+/// This is the service for books
+/// </summary>
 public interface IBookService
 {
     public IEnumerable<BookDTO> GetAll();

@@ -1,3 +1,6 @@
+/// <summary>
+/// Info of the Faltas
+/// </summary>
 public class FaltasDTO
 {
     public FaltasDTO()
