@@ -12,7 +12,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        services.AddSingleton<LibraryContext>(_ =>
+        services.AddTransient<LibraryContext>(_ =>
             new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
 
