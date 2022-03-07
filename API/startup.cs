@@ -1,3 +1,4 @@
+using System.Reflection;
 using AutoMapper;
 
 public class Startup
@@ -15,7 +16,12 @@ public class Startup
         services.AddTransient<LibraryContext>(_ =>
             new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(options =>
+        {
+            var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            options.IncludeXmlComments(xmlPath);
+        });
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
@@ -66,4 +72,6 @@ public class Startup
                 pattern: "{controller=Home}/{action=Index}/{id?}");
         });
     }
+
+
 }
