@@ -27,14 +27,15 @@ public class Startup
         {
             mc.AddProfile(new BookProfile());
             mc.AddProfile(new FaltasProfile());
+            mc.AddProfile(new BookVersionProfile());
         });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
 
-        services.AddSingleton<IBookService, BookService>();
-        services.AddSingleton<IFaltasService, FaltasService>();
-
+        services.AddTransient<IBookService, BookService>();
+        services.AddTransient<IFaltasService, FaltasService>();
+        services.AddTransient<IBookVersionService, BookVersionService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
