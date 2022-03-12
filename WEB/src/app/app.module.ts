@@ -15,6 +15,8 @@ import { ChartComponent } from './pages/chart/chart.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { FaltasService } from './services/faltas.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -28,7 +30,15 @@ import { FaltasService } from './services/faltas.service';
     LineChartComponent,
     BarChartComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule,HttpClientModule,NgChartsModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgChartsModule,
+    BrowserAnimationsModule,
+    MatSliderModule
+  ],
   providers: [BookService, FaltasService],
   bootstrap: [AppComponent],
 })
