@@ -14,6 +14,8 @@ public class JuegoEntity
     [MaxLength(100)]
     public string genero { get; set; }
     [MaxLength(100)]
+    public string plataforma { get; set; }
+    [MaxLength(100)]
     public string imagen { get; set; }
 
 }

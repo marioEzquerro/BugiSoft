@@ -11,5 +11,6 @@ CREATE TABLE [dbo].[Juego]
 [descripcion] [nvarchar](max) NOT NULL,
 [fecha_lanzamiento] [datetime2](7),
 [genero] [nvarchar](100) NOT NULL,
+[plataforma] [nvarchar](100) NOT NULL,
 [imagen] [nvarchar](100) NOT NULL
 );

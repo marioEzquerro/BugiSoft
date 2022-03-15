@@ -14,5 +14,6 @@ public class JuegoDTO
     public string descripcion { get; set; }
     public DateTime fecha_lanzamiento { get; set; }
     public string genero { get; set; }
+    public string plataforma { get; set; }
     public string imagen { get; set; }
 }
