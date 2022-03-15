@@ -1,8 +1,0 @@
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
-insert into Editorial values(CONVERT(varchar(255), NEWID()))
