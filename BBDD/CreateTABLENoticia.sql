@@ -10,7 +10,7 @@ CREATE TABLE [dbo].[Noticia]
     [nombre] NVARCHAR(50) NOT NULL,
     [descripcion_corta] NVARCHAR(200) NOT NULL,
     [descripcion] NVARCHAR(max) NOT NULL,
-    [img] NVARCHAR(50) NOT NULL,
+    [img] NVARCHAR(100) NOT NULL,
     [fecha] DATETIME2 NOT NULL
     -- Specify more columns here
 );

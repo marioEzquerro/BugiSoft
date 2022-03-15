@@ -13,8 +13,8 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllersWithViews();
-        services.AddTransient<LibraryContext>(_ =>
-            new LibraryContext(Configuration.GetConnectionString("DefaultConnection")));
+        services.AddTransient<BugisoftContext>(_ =>
+            new BugisoftContext(Configuration.GetConnectionString("DefaultConnection")));
 
         services.AddSwaggerGen(options =>
         {
@@ -25,17 +25,15 @@ public class Startup
 
         var mapperConfig = new MapperConfiguration(mc =>
         {
-            mc.AddProfile(new BookProfile());
-            mc.AddProfile(new FaltasProfile());
-            mc.AddProfile(new BookVersionProfile());
+            mc.AddProfile(new JuegoProfile());
+            mc.AddProfile(new NoticiaProfile());
         });
 
         IMapper mapper = mapperConfig.CreateMapper();
         services.AddSingleton(mapper);
 
-        services.AddTransient<IBookService, BookService>();
-        services.AddTransient<IFaltasService, FaltasService>();
-        services.AddTransient<IBookVersionService, BookVersionService>();
+        services.AddTransient<IJuegoService, JuegoService>();
+        services.AddTransient<INoticiaService, NoticiaService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
