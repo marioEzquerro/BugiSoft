@@ -1,35 +1,132 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+          <div class="container px-4 px-lg-5">
+              <a class="navbar-brand text-black fs-2" href="#page-top">BugiSoft</a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                      <li class="nav-item"><a class="nav-link text-black" href="#about">Home</a></li>
+                      <li class="nav-item"><a class="nav-link text-black" href="#services">Biblioteca</a></li>
+                      <li class="nav-item"><a class="nav-link text-black" href="#contact">Noticias</a></li>
+                  </ul>
+              </div>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+      </nav>
+
+      <!-- About-->
+      <section class="page-section bg-primary" id="about">
+          <div class="container px-4 px-lg-5">
+              <div class="row gx-4 gx-lg-5 justify-content-center">
+                  <div class="col-lg-8 text-center">
+                      <h1 class="text-black mt-0">Bienvenido a BugiSoft</h1>
+                      <hr class="divider divider-light" />
+                      <p class="text-black-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                      <!-- <a class="btn btn-dark btn-xl" href="#services">Get Started!</a> -->
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Services-->
+      <section class="page-section" id="services">
+          <div class="container px-4 px-lg-5">
+              <h2 class="text-center mt-0">Nuestros servicios</h2>
+              <hr class="divider" />
+              <div class="row gx-4 gx-lg-5">
+                  <div class="col-lg-3 col-md-6 text-center">
+                      <div class="mt-5">
+                          <div class="mb-2"><i class="bi bi-controller fs-1 text-primary"></i></div>
+                          <h3 class="h4 mb-2">Descubre todos los titulos</h3>
+                          <p class="text-muted mb-0">Nuestro inmenso catalogo de juegos garantiza que cualquiera encontrara este titulo del que acabará hablando.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center">
+                      <div class="mt-5">
+                          <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                          <h3 class="h4 mb-2">Multiplataforma</h3>
+                          <p class="text-muted mb-0">Disponible en pc ya seas Mac, Windows o Linux y cualquier smartphone.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center">
+                      <div class="mt-5">
+                          <div class="mb-2"><i class="bi bi-newspaper fs-1 text-primary"></i></div>
+                          <h3 class="h4 mb-2">A la última</h3>
+                          <p class="text-muted mb-0">Da por sentado que no te perderas ni una oferta o novedad gracias a nosotros.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 text-center">
+                      <div class="mt-5">
+                          <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                          <h3 class="h4 mb-2">Hecho con cariño</h3>
+                          <p class="text-muted mb-0">Para nuestra querida comunidad para que siga creaciendo y dando a conocer el maravilloso mundo gaming.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- Portfolio-->
+      <div id="portfolio">
+          <div class="container-fluid p-0">
+              <div class="row g-0">
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/thumbnails/1.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                          <div class="portfolio-box-caption">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/fullsize/2.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                          <div class="portfolio-box-caption">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/fullsize/3.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                          <div class="portfolio-box-caption">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/fullsize/4.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                          <div class="portfolio-box-caption">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/fullsize/5.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                          <div class="portfolio-box-caption">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <a class="portfolio-box" href="../../../../assets/img/portfolio/fullsize/6.jpg" title="Project Name">
+                          <img class="img-fluid" src="../../../../assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                          <div class="portfolio-box-caption p-3">
+                              <div class="project-category text-white-50">Category</div>
+                              <div class="project-name">Project Name</div>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Footer-->
+      <footer class="bg-light py-5">
+          <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - BugiSoft</div></div>
+      </footer>
