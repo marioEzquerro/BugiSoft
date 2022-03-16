@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { InputFilterComponent } from './components/input-filter/input-filter.component';
-import { ListBooksComponent } from './components/list-books/list-books.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './services/book.service';
@@ -20,6 +19,8 @@ import { BibliotecaPageComponent } from './pages/home/biblioteca-page/biblioteca
 import { ForbiddenUrlComponentComponent } from './components/forbidden-url-component/forbidden-url-component.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.component';
+
 
 
 
@@ -28,13 +29,13 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HomeComponentComponent,
     InputFilterComponent,
-    ListBooksComponent,
     FormJuegoComponent,
     FormNoticiaComponent,
     BibliotecaPageComponent,
     ForbiddenUrlComponentComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    NoticiasPageComponent
   ],
   imports: [
     BrowserModule,
