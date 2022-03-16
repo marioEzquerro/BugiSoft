@@ -4,23 +4,12 @@
       <div class="col-lg-8 text-center">
         <h1 class="text-black mt-0">Noticia del día</h1>
         <hr class="divider divider-light" />
-        <!-- <p class="text-black-75 mb-4"></p> -->
 
         <div class="container-fluid p-0">
           <div class="row g-0">
             <div class="col-12">
-              <a
-                class="portfolio-box"
-                href="../../../../assets/img/portfolio/thumbnails/1.jpg"
-                [routerLink]="['/noticias/', noticia?.id]"
-                title="{{ noticia?.nombre }}"
-              >
-                <img
-                  class="img-fluid"
-                  src="assets/img/{{ noticia?.img }}"
-                  alt="..."
-                  style="width: 60vw"
-                />
+              <a class="portfolio-box" [routerLink]="['/noticias/', noticia?.id]" title="{{ noticia?.nombre }}">
+                <img class="img-fluid rounded" src="assets/img/{{ noticia?.img }}" alt="..." style="width: 60vw" />
                 <div class="portfolio-box-caption">
                   <h4 class="h4 mb-2">{{ noticia?.nombre }}</h4>
                   <div class="project-subtitle">

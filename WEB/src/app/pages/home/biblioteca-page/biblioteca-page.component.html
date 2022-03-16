@@ -1,42 +1,66 @@
 <!-- Navigation -->
-<app-navigation class="mt-5"></app-navigation>
-<br /><br /><br /><br /><br /><br />
+<app-navigation></app-navigation>
+<br><br><br>
 
 <!-- Biblioteca-->
-<div id="portfolio">
-  <h2 class="text-center">Biblioteca: {{ filter}}</h2>
-
-
-  <div class="container-fluid p-0 mt-5">
+<div id="portfolio" class="bg-primary pt-4">
+  <div class="container-fluid p-0">
     <div class="row g-0">
-      <div class="col-2 vh-100 mx-1 mx-lg-3">
-
-        <h4 class="fw-bold">Generos</h4>
-        <ul class="nav flex-column">
-
+      <div class="col-2 mx-1 vh-75 mx-lg-3 px-3 bg-dark p-2 py-4">
+        <h4 class="fw-bold text-white">Generos</h4>
+        <ul class="navbar-nav flex-column">
           <li class="nav-item">
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('accion')">Acción</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('sandbox')">SandBox</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('moba')">MOBA</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('aventura')">Aventura</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('rol')">ROL</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('metroidvania')">Metroidvania</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('carreras')">Carreras</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('mmorpg')">MMORPG</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('mundo abierto')">Mundo abierto</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('disparos')">FPS</a>
-            <a class="nav-link pointer text-dark" (click)="aplicarFiltro('simulador de fabrica')">Tycoon</a>
+            <a class="nav-link pointer" (click)="aplicarFiltro('accion')">Acción</a>
           </li>
-          <button class="btn btn-primary mt-1" style="width: 100px;" (click)="reload()">Clear</button>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('sandbox')">SandBox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('moba')">MOBA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('aventura')">Aventura</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('rol')">ROL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('metroidvania')">Metroidvania</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('carreras')">Carreras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('mmorpg')">MMORPG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('mundo abierto')">Mundo abierto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('disparos')">FPS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" (click)="aplicarFiltro('simulador de fabrica')">Tycoon</a>
+          </li>
+
+          <span class="text-muted mt-3">Buscando:</span>
+          <span class="text-muted text-uppercase">{{ filter }}</span>
+          <button class="btn btn-primary mt-1" style="width: 100px" (click)="reload()">
+            Clear
+          </button>
         </ul>
       </div>
 
       <div class="col-9">
         <div class="row g-1">
           <ng-container *ngFor="let Juego of juegos">
-            <div class="col-lg-4 col-sm-6" *ngIf="Juego.genero?.toUpperCase()?.includes(filter?.toUpperCase() ?? '')">
+            <div class="col-lg-4 col-sm-6" *ngIf="
+                Juego.genero
+                  ?.toUpperCase()
+                  ?.includes(filter?.toUpperCase() ?? '')
+              ">
               <a class="portfolio-box" [routerLink]="['/juegos/' + Juego.id]" title="Name">
-                <img class="img-fluid" src="assets/img/{{ Juego.imagen }}" alt="..."
+                <img class="img-fluid rounded" src="assets/img/{{ Juego.imagen }}" alt="..."
                   style="height: 100%; object-fit: cover" />
 
                 <div class="portfolio-box-caption">
@@ -53,3 +77,5 @@
     </div>
   </div>
 </div>
+
+<app-footer></app-footer>

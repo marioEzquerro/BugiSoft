@@ -1,73 +1,35 @@
-<section
-  class="page-section bg-dark text-white row justify-content-center"
->
+<section class="bg-dark text-white row justify-content-center">
   <h2 class="text-center mt-5">Formulario nueva noticia</h2>
   <form class="col-6 mt-5" [formGroup]="noticiaForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="nom">Nombre</label>
-      <input
-        type="text"
-        class="form-control"
-        id="nom"
-        formControlName="nom"
-        aria-describedby="nomHelp"
-        required
-      />
-      <small id="nomHelp" class="form-text text-white"
-        >Nombre de la noticia que quieres añadir.</small
-      >
+      <input type="text" class="form-control" id="nom" formControlName="nom" aria-describedby="nomHelp" required />
+      <small id="nomHelp" class="form-text text-white">Nombre de la noticia que quieres añadir.</small>
     </div>
     <br />
     <div class="form-group">
       <label for="desc_c">Descripcion corta</label>
-      <textarea
-        class="form-control"
-        id="desc_c"
-        formControlName="desc_c"
-        rows="3"
-        aria-describedby="desc_cHelp"
-      ></textarea>
-      <small id="desc_cHelp" class="form-text text-white"
-        >Descripcion corta que acompañara al nombre al mostrarse la
-        noticia.</small
-      >
+      <textarea class="form-control" id="desc_c" formControlName="desc_c" rows="3"
+        aria-describedby="desc_cHelp"></textarea>
+      <small id="desc_cHelp" class="form-text text-white">Descripcion corta que acompañara al nombre al mostrarse la
+        noticia.</small>
     </div>
     <br />
     <div class="form-group">
       <label for="desc_l">Descripcion larga</label>
-      <textarea
-        class="form-control"
-        id="desc_l"
-        formControlName="desc_l"
-        rows="6"
-        aria-describedby="desl_lHelp"
-        required
-      ></textarea>
-      <small id="desc_lHelp" class="form-text text-white"
-        >Descripcion larga, sera el contenido principal de la noticia.</small
-      >
+      <textarea class="form-control" id="desc_l" formControlName="desc_l" rows="6" aria-describedby="desl_lHelp"
+        required></textarea>
+      <small id="desc_lHelp" class="form-text text-white">Descripcion larga, sera el contenido principal de la
+        noticia.</small>
     </div>
     <br />
     <div class="form-group">
       <label for="img">Imagen</label>
-      <input
-        type="text"
-        class="form-control"
-        id="img"
-        formControlName="img"
-        aria-describedby="imgHelp"
-        required
-      />
-      <small id="imgHelp" class="form-text text-white"
-        >Nombre de la imagen junto con la extension</small
-      >
+      <input type="text" class="form-control" id="img" formControlName="img" aria-describedby="imgHelp" required />
+      <small id="imgHelp" class="form-text text-white">Nombre de la imagen junto con la extension</small>
     </div>
     <br />
-    <button
-      type="submit"
-      class="btn btn-primary"
-      [disabled]="!noticiaForm.valid"
-    >
+    <button type="submit" class="btn btn-primary" [disabled]="!noticiaForm.valid">
       Submit
     </button>
   </form>
