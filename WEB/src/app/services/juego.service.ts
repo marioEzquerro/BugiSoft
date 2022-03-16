@@ -36,8 +36,4 @@ export class JuegoService {
     );
     return result;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> f0371f9985f420fb11e16db491941eabc6f494de
 }

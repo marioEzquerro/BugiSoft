@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {AbstractControl,FormBuilder,ValidationErrors,ValidatorFn,} from '@angular/forms';
-import { Validators } from '@angular/forms';
-import { FormArray } from '@angular/forms';
 import { JuegoService } from 'src/app/services/juego.service';
 import { Juego } from 'src/app/models/juego.model';
 
