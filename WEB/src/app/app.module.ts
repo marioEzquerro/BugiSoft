@@ -44,7 +44,7 @@ import { JuegoService } from './services/juego.service';
     BrowserAnimationsModule,
     MatSliderModule
   ],
-  providers: [JuegoService, NoticiaService],
+  providers: [JuegoService, NoticiaService, JuegoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
