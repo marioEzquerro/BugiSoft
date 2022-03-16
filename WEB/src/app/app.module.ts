@@ -17,6 +17,9 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { FaltasService } from './services/faltas.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { FormJuegoComponent } from './components/form-juego/form-juego.component';
+import { FormNoticiaComponent } from './components/form-noticia/form-noticia.component';
+import { NoticiaService } from './services/noicia.service';
 
 
 @NgModule({
@@ -29,17 +32,19 @@ import { MatSliderModule } from '@angular/material/slider';
     ChartComponent,
     LineChartComponent,
     BarChartComponent,
+    FormJuegoComponent,
+    FormNoticiaComponent,
   ],
   imports: [
-    BrowserModule, 
-    AppRoutingModule, 
+    BrowserModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     NgChartsModule,
     BrowserAnimationsModule,
     MatSliderModule
   ],
-  providers: [BookService, FaltasService],
+  providers: [BookService, FaltasService, NoticiaService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
