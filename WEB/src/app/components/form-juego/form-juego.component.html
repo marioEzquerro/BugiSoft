@@ -1,0 +1,104 @@
+<section
+  class="page-section bg-dark text-white row justify-content-center"
+>
+  <h2 class="text-center mt-5">Formulario nuevo Juego</h2>
+  <form class="col-6 mt-5" [formGroup]="juegoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nom"
+        formControlName="nom"
+        aria-describedby="nomHelp"
+        required
+      />
+      <small id="nomHelp" class="form-text text-white"
+        >Nombre de la juego que quieres añadir.</small
+      >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="desc">Descripcion</label>
+      <textarea
+        class="form-control"
+        id="desc"
+        formControlName="desc"
+        rows="6"
+        aria-describedby="descHelp"
+        required
+      ></textarea>
+      <small id="descHelp" class="form-text text-white"
+        >Descripcion que contendra toda la informacion del juego.</small
+      >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="fecha">Fecha de Lanzamiento</label>
+      <input
+        type="datetime"
+        class="form-control"
+        id="fecha"
+        formControlName="fecha"
+        aria-describedby="fechaHelp"
+        required
+      />
+      <small id="fechaHelp" class="form-text text-white"
+        >Fecha en la que el juego salio a mercado de manera oficial.</small
+      >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="fecha">Genero</label>
+      <input
+        type="text"
+        class="form-control"
+        id="genero"
+        formControlName="genero"
+        aria-describedby="generoHelp"
+        required
+      />
+      <small id="generoHelp" class="form-text text-white"
+        >Introduce todos los generos a los que pertenece el juego.Ej: Accion, Aventura...</small
+      >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="fecha">Plataforma</label>
+      <input
+        type="text"
+        class="form-control"
+        id="plat"
+        formControlName="plat"
+        aria-describedby="platHelp"
+        required
+      />
+      <small id="platHelp" class="form-text text-white"
+        >Introduce todas las plataformas a las que pertenece el juego.Ej: Windows, PlayStation...</small
+      >
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="img">Imagen</label>
+      <input
+        type="text"
+        class="form-control"
+        id="img"
+        formControlName="img"
+        aria-describedby="imgHelp"
+        required
+      />
+      <small id="imgHelp" class="form-text text-white"
+        >Nombre de la imagen junto con la extension</small
+      >
+    </div>
+    <br />
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!juegoForm.valid"
+    >
+      Submit
+    </button>
+  </form>
+</section>

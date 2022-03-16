@@ -44,7 +44,7 @@ import { NoticiaInicioComponentComponent } from './components/noticia-inicio-com
     BrowserAnimationsModule,
     MatSliderModule,
   ],
-  providers: [JuegoService, NoticiaService],
+  providers: [JuegoService, NoticiaService, JuegoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
