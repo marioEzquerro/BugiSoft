@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Juego } from 'src/app/models/juego.model';
 import { JuegoService } from 'src/app/services/juego.service';
 
@@ -9,9 +9,20 @@ import { JuegoService } from 'src/app/services/juego.service';
 })
 export class BibliotecaPageComponent implements OnInit {
   juegos: Juego[] | null;
+  @Input() filter: string | null;
 
-  constructor(private _juegoService: JuegoService) { 
+
+  constructor(private _juegoService: JuegoService) {
     this.juegos = null;
+    this.filter = null;
+  }
+
+  aplicarFiltro(filtro: string) {
+    this.filter = filtro;
+  }
+
+  reload() {
+    window.location.reload();
   }
 
   ngOnInit(): void {
