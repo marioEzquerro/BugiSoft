@@ -11,6 +11,8 @@ export class JuegoService {
     return this.http.get<Juego[]>(environment.API_URL + 'juegos');
   }
 
+<<<<<<< HEAD
+=======
   postJuegoData(body : any) : Juego {
     let bodyData =new Juego();
     bodyData.nombre = body.nom;
@@ -33,5 +35,6 @@ export class JuegoService {
     )
     return result;
   }
+>>>>>>> 9b1fae1ed23cc01541e71343955a0f9a421e32f7
 
 }
