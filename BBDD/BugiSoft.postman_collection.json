@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "cd3cd290-dac3-4de8-80f7-2c56f62bc621",
+		"name": "BugiSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL Juegos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/juegos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"juegos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Juego By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/juegos/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"juegos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Juego",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Juego1\",\r\n        \"descripcion\": \"Holi\",\r\n        \"fecha_lanzamiento\": \"2022-04-20T00:00:00\",\r\n        \"genero\": \"Fantasia\",\r\n        \"plataforma\": \"Jorge\",\r\n        \"imagen\": \"img\"\r\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:7199/juegos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"juegos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Juego By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/juegos/12",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"juegos",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MODIFY Juego By ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Juego MODIFICADO\",\r\n    \"descripcion\": \"MODIFICADO\",\r\n    \"fecha_lanzamiento\": \"2022-04-20T00:00:00\",\r\n    \"genero\": \"Fantasia\",\r\n    \"plataforma\": \"Jorge\",\r\n    \"imagen\": \"img\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7199/juegos/13",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"juegos",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Noticias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/Noticias",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"Noticias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Noticia By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/noticias/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"noticias",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Noticia",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Hola\",\r\n        \"descripcion_corta\": \"Adios\",\r\n        \"descripcion\": \"sdsssssssssssssss\",\r\n        \"img\": \"fffff\",\r\n        \"fecha\": \"2022-03-16T04:09:30.758\"\r\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:7199/noticias",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"noticias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Noticia By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7199/noticias/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"noticias",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MODIFY Noticia By ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"MODIFICADO\",\r\n    \"descripcion_corta\": \"MODIFICADO\",\r\n    \"descripcion\": \"MODIFICADO\",\r\n    \"img\": \"is\",\r\n    \"fecha\": \"2022-03-16T04:11:08.62\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7199/noticias/8",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7199",
+					"path": [
+						"noticias",
+						"8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

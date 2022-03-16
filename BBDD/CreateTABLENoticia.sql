@@ -7,10 +7,10 @@ GO
 CREATE TABLE [dbo].[Noticia]
 (
     [id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-    [nombre] NVARCHAR(50) NOT NULL,
-    [descripcion_corta] NVARCHAR(200) NOT NULL,
+    [nombre] NVARCHAR(150) NOT NULL,
+    [descripcion_corta] NVARCHAR(200),
     [descripcion] NVARCHAR(max) NOT NULL,
-    [img] NVARCHAR(50) NOT NULL,
+    [img] NVARCHAR(100) NOT NULL,
     [fecha] DATETIME2 NOT NULL
     -- Specify more columns here
 );

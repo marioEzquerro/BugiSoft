@@ -27,14 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/css/bootsnav.css",
-              "src/css/bootstrap-select.css",
-              "src/css/bootstrap.min.css"
+              "src/css/styles.css"
             ],
             "scripts": [
-              "src/js/bootstrap-select.js",
-              "src/js/bootstrap.min.js"              
+              "src/js/scripts.js"
             ]
           },
           "configurations": {
@@ -99,16 +95,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css",
-              "src/css/bootsnav.css",
-              "src/css/bootstrap-select.css",
-              "src/css/bootstrap.min.css"
-            ],
-            "scripts": [
-              "src/js/bootstrap-select.js",
-              "src/js/bootstrap.min.js"              
-            ]
+            "styles": [],
+            "scripts": []
           }
         }
       }

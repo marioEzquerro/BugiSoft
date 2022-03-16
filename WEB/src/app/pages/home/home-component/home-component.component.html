@@ -1,35 +1,80 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+<!-- Navigation-->
+<app-navigation></app-navigation>
+
+<!-- About-->
+<section class="page-section bg-primary border-bottom" id="about">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="text-black mt-0">Bienvenido a BugiSoft</h1>
+        <hr class="divider divider-light" />
+        <p class="text-black-75 mb-4">
+          Start Bootstrap has everything you need to get your new website up and
+          running in no time! Choose one of our open source, free to download,
+          and easy to use themes! No strings attached!
+        </p>
+      </div>
     </div>
-  </nav>
+  </div>
+</section>
+
+<!-- <app-biblioteca-juegos></app-biblioteca-juegos> -->
+
+<!-- Services-->
+<section class="page-section">
+  <div class="container px-4 px-lg-5">
+    <h2 class="text-center mt-0">Nuestros servicios</h2>
+    <hr class="divider" />
+    <div class="row gx-4 gx-lg-5">
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <div class="mb-2">
+            <i class="bi bi-controller fs-1 text-primary"></i>
+          </div>
+          <h3 class="h4 mb-2">Descubre todos los titulos</h3>
+          <p class="text-muted mb-0">
+            Nuestro inmenso catalogo de juegos garantiza que cualquiera
+            encontrara este titulo del que acabará hablando.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+          <h3 class="h4 mb-2">Multiplataforma</h3>
+          <p class="text-muted mb-0">
+            Disponible en pc ya seas Mac, Windows o Linux y cualquier
+            smartphone.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <div class="mb-2">
+            <i class="bi bi-newspaper fs-1 text-primary"></i>
+          </div>
+          <h3 class="h4 mb-2">A la última</h3>
+          <p class="text-muted mb-0">
+            Da por sentado que no te perderas ni una oferta o novedad gracias a
+            nosotros.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+          <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+          <h3 class="h4 mb-2">Hecho con cariño</h3>
+          <p class="text-muted mb-0">
+            Para nuestra querida comunidad para que siga creaciendo y dando a
+            conocer el maravilloso mundo gaming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-form-noticia></app-form-noticia>
+
+<!-- Footer-->
+<app-footer></app-footer>
