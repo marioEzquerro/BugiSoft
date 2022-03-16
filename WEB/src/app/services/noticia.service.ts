@@ -15,6 +15,10 @@ export class NoticiaService {
     return this.http.get<Noticia>(environment.API_URL + 'noticias/last');
   }
 
+  getNoticiaById(id: any): Observable<Noticia> {
+    return this.http.get<Noticia>(environment.API_URL + 'noticias/' + id);
+  }
+
   postNoticiaData(body: any): Noticia {
     let bodyData = new Noticia();
     bodyData.nombre = body.nom;

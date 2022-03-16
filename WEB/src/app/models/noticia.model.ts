@@ -1,5 +1,5 @@
 export class Noticia {
-  Id: number;
+  id: number;
   nombre: string | null;
   descripcion_corta: string | null;
   descripcion: string | null;
@@ -7,7 +7,7 @@ export class Noticia {
   fecha: Date | null;
 
   constructor() {
-    this.Id = 0;
+    this.id = 0;
     this.nombre = null;
     this.descripcion_corta = null;
     this.descripcion = null;
@@ -15,4 +15,3 @@ export class Noticia {
     this.fecha = null;
   }
 }
-
