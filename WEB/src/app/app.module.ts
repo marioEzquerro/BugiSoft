@@ -21,6 +21,7 @@ import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.
 import { JuegoService } from './services/juego.service';
 import { NoticiaInicioComponentComponent } from './components/noticia-inicio-component/noticia-inicio-component.component';
 import { ItemJuegoComponent } from './pages/home/item-juego/item-juego.component';
+import { ItemNoticiaComponentComponent } from './pages/home/item-noticia-component/item-noticia-component.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ItemJuegoComponent } from './pages/home/item-juego/item-juego.component
     NoticiasPageComponent,
     NoticiaInicioComponentComponent,
     ItemJuegoComponent,
+    ItemNoticiaComponentComponent,
   ],
   imports: [
     BrowserModule,

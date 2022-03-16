@@ -4,6 +4,7 @@ import { ForbiddenUrlComponentComponent } from './components/forbidden-url-compo
 import { BibliotecaPageComponent } from './pages/home/biblioteca-page/biblioteca-page.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { ItemJuegoComponent } from './pages/home/item-juego/item-juego.component';
+import { ItemNoticiaComponentComponent } from './pages/home/item-noticia-component/item-noticia-component.component';
 import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.component';
 
 const routes: Routes = [
@@ -24,9 +25,13 @@ const routes: Routes = [
     component: ItemJuegoComponent,
   },
   {
+    path: 'noticias/:idNoticia',
+    component: ItemNoticiaComponentComponent,
+  },
+  {
     path: '**',
     component: ForbiddenUrlComponentComponent,
-  }
+  },
 ];
 
 @NgModule({
