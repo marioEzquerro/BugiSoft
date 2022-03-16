@@ -15,4 +15,5 @@ public interface INoticiaService
     public void Delete(int guid);
 
     public NoticiaDTO Modify(NoticiaDTO Noticia, int guid);
+    public NoticiaDTO GetLast();
 }

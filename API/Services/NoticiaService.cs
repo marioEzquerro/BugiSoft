@@ -40,6 +40,11 @@ public class NoticiaService : INoticiaService
     {
         return _mapper.Map<NoticiaDTO>(_context.Noticias.FirstOrDefault(x => x.Id == guid));
     }
+// si no va fuera
+    public NoticiaDTO GetLast()
+    {
+        return _mapper.Map<NoticiaDTO>(_context.Noticias.Select(x => x).OrderByDescending(x => x.Id).First());
+    }
 
     public NoticiaDTO Modify(NoticiaDTO Noticia, int guid)
     {

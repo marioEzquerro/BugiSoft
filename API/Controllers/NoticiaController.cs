@@ -32,6 +32,23 @@ public class NoticiasController : Controller
         return Ok(_NoticiaService.GetAll());
     }
 
+     /// <summary>
+    /// Returns the las Noticia
+    /// </summary>
+    /// <returns>Returns a list of <see cref="NoticiaDTO"/></returns>
+    [HttpGet("last")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(NoticiaDTO))]
+    public ActionResult<NoticiaDTO> GetLast()
+    {
+        NoticiaDTO result = _NoticiaService.GetLast();
+
+        if (result == null)
+            return NotFound();
+
+        return Ok(result);
+    }
+
+
     /// <summary>
     /// It returns a Noticia by id 
     /// </summary>

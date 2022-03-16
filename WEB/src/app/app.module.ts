@@ -19,8 +19,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.component';
 import { JuegoService } from './services/juego.service';
-
-
+import { NoticiaInicioComponentComponent } from './components/noticia-inicio-component/noticia-inicio-component.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,8 @@ import { JuegoService } from './services/juego.service';
     ForbiddenUrlComponentComponent,
     NavigationComponent,
     FooterComponent,
-    NoticiasPageComponent
+    NoticiasPageComponent,
+    NoticiaInicioComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +42,9 @@ import { JuegoService } from './services/juego.service';
     HttpClientModule,
     NgChartsModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
   ],
-  providers: [JuegoService, NoticiaService],
+  providers: [JuegoService, NoticiaService, JuegoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
