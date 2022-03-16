@@ -5,10 +5,11 @@
 <!-- Biblioteca-->
 <div id="portfolio">
   <h2 class="text-center">Biblioteca</h2>
+
   <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-lg-8 text-center">
       <p class="text-center text-black-75 mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipitp
         aliquam commodi voluptate atque? Dolor corrupti, quod unde sapiente
         necessitatibus ab quaerat sit dolore doloremque sequi doloribus, cum
         deserunt iste suscipit?
@@ -16,25 +17,52 @@
     </div>
   </div>
   <hr class="divider" />
+
   <div class="container-fluid p-0">
     <div class="row g-0">
-      <ng-container *ngFor="let Juego of juegos">
-        <div class="col-lg-4 col-sm-6">
-          <a
-            class="portfolio-box"
-            href="../../../../assets/img/portfolio/thumbnails/1.jpg"
-            [routerLink]="['juegos', Juego.Id]"
-            title="Name"
-          >
-            <!-- src="../../../../assets/img/portfolio/thumbnails/1.jpg" -->
-            <img class="img-fluid " src="assets/img/{{Juego.imagen}}" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-name">{{ Juego.nombre }}</div>
-              <div class="project-category text-white-50">{{ Juego.genero }}</div>
+      <div class="col-2 bg-dark vh-100 mx-1 mx-lg-3">
+        <nav class="navbar bg-light">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tutorials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Articles</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-9">
+        <div class="row g-1">
+          <ng-container *ngFor="let Juego of juegos">
+            <div class="col-lg-4 col-sm-6">
+              <a
+                class="portfolio-box"
+                [routerLink]="['/juegos', Juego.Id]"
+                title="Name"
+              >
+                <img
+                  class="img-fluid"
+                  src="assets/img/{{ Juego.imagen }}"
+                  alt="..."
+                  style="height: 100%; object-fit: cover"
+                />
+
+                <div class="portfolio-box-caption">
+                  <div class="project-name">{{ Juego.nombre }}</div>
+                  <div class="project-category text-white-50">
+                    {{ Juego.genero }}
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
+          </ng-container>
         </div>
-      </ng-container>
+      </div>
     </div>
   </div>
 </div>
