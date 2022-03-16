@@ -21,19 +21,20 @@
   <div class="container-fluid p-0">
     <div class="row g-0">
       <div class="col-2 bg-dark vh-100 mx-1 mx-lg-3">
-        <nav class="navbar bg-light">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tutorials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Articles</a>
-            </li>
-          </ul>
-        </nav>
+        <!-- izq input juegos| desplegable de plataformas | lista de generos -->
+        <ul class="nav flex-column">
+          <h4 class="nav-link">Generos</h4>
+
+          <li class="nav-item">
+            <h6 class="nav-link font-weigh-bold" href="#">Active</h6>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
       </div>
 
       <div class="col-9">
@@ -42,7 +43,7 @@
             <div class="col-lg-4 col-sm-6">
               <a
                 class="portfolio-box"
-                [routerLink]="['/juegos', Juego.Id]"
+                [routerLink]="['/juegos/' + Juego.id]"
                 title="Name"
               >
                 <img

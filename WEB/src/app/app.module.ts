@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.component';
 import { JuegoService } from './services/juego.service';
 import { NoticiaInicioComponentComponent } from './components/noticia-inicio-component/noticia-inicio-component.component';
+import { ItemJuegoComponent } from './pages/home/item-juego/item-juego.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NoticiaInicioComponentComponent } from './components/noticia-inicio-com
     FooterComponent,
     NoticiasPageComponent,
     NoticiaInicioComponentComponent,
+    ItemJuegoComponent,
   ],
   imports: [
     BrowserModule,
