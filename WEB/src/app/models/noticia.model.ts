@@ -1,18 +1,13 @@
 export class Noticia {
-  id: number;
-
+  Id: number;
   nombre: string | null;
-
   descripcion_corta: string | null;
-
   descripcion: string | null;
-
   img: string | null;
-
   fecha: Date | null;
 
   constructor() {
-    this.id = 0;
+    this.Id = 0;
     this.nombre = null;
     this.descripcion_corta = null;
     this.descripcion = null;
@@ -20,3 +15,4 @@ export class Noticia {
     this.fecha = null;
   }
 }
+

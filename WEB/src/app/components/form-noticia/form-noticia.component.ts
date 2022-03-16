@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
-import { NoticiaService } from 'src/app/services/noicia.service';
+import { NoticiaService } from 'src/app/services/noticia.service';
 
 @Component({
   selector: 'app-form-noticia',

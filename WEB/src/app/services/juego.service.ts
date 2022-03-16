@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Faltas } from '../models/faltas.model';
+import { Juego } from '../models/juego.model'; 
 
 @Injectable()
-export class FaltasService {
+export class JuegoService {
   constructor(private http: HttpClient) {}
-  getBookData() : Observable<Faltas[]> {
-    return this.http.get<Faltas[]>(environment.API_URL + 'faltas');
+  getJuegoData() : Observable<Juego[]> {
+    return this.http.get<Juego[]>(environment.API_URL + 'juegos');
   }
 }

@@ -8,7 +8,7 @@ import { Noticia } from '../models/noticia.model';
 export class NoticiaService {
   constructor(private http: HttpClient) {}
   getNoticiaData() : Observable<Noticia[]> {
-    return this.http.get<Noticia[]>(environment.API_URL + 'Noticias');
+    return this.http.get<Noticia[]>(environment.API_URL + 'noticias');
   }
 
   postNoticiaData(body : any) : Noticia {
@@ -20,7 +20,7 @@ export class NoticiaService {
     bodyData.fecha= new Date();
 
     let result =new Noticia();
-    this.http.post<Noticia>(environment.API_URL + 'Noticias',bodyData)
+    this.http.post<Noticia>(environment.API_URL + 'noticias',bodyData)
     .subscribe(
       (response) => {
         console.log('response received')

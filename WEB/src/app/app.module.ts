@@ -5,21 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 import { InputFilterComponent } from './components/input-filter/input-filter.component';
-import { ListBooksComponent } from './components/list-books/list-books.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BookService } from './services/book.service';
 import { NgChartsModule } from 'ng2-charts';
-import { FaltasService } from './services/faltas.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormJuegoComponent } from './components/form-juego/form-juego.component';
 import { FormNoticiaComponent } from './components/form-noticia/form-noticia.component';
-import { NoticiaService } from './services/noicia.service';
+import { NoticiaService } from './services/noticia.service';
 import { BibliotecaPageComponent } from './pages/home/biblioteca-page/biblioteca-page.component';
 import { ForbiddenUrlComponentComponent } from './components/forbidden-url-component/forbidden-url-component.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NoticiasPageComponent } from './pages/home/noticias-page/noticias-page.component';
+import { JuegoService } from './services/juego.service';
 
 
 
@@ -28,13 +27,13 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HomeComponentComponent,
     InputFilterComponent,
-    ListBooksComponent,
     FormJuegoComponent,
     FormNoticiaComponent,
     BibliotecaPageComponent,
     ForbiddenUrlComponentComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    NoticiasPageComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +44,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     MatSliderModule
   ],
-  providers: [BookService, FaltasService, NoticiaService],
+  providers: [JuegoService, NoticiaService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
