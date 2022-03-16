@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateBookComponent } from './components/create-book/create-book.component';
-import { ChartComponent } from './pages/chart/chart.component';
+import { ForbiddenUrlComponentComponent } from './components/forbidden-url-component/forbidden-url-component.component';
+import { BibliotecaPageComponent } from './pages/home/biblioteca-page/biblioteca-page.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 
 const routes: Routes = [
@@ -10,12 +10,12 @@ const routes: Routes = [
     component: HomeComponentComponent,
   },
   {
-    path: 'create',
-    component: CreateBookComponent,
+    path: 'biblioteca',
+    component: BibliotecaPageComponent,
   },
   {
-    path: 'chart',
-    component: ChartComponent,
+    path: '**',
+    component: ForbiddenUrlComponentComponent,
   }
 ];
 

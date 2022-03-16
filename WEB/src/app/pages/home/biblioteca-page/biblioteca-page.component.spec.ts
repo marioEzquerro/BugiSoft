@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LineChartComponent } from './line-chart.component';
+import { BibliotecaPageComponent } from './biblioteca-page.component';
 
-describe('LineChartComponent', () => {
-  let component: LineChartComponent;
-  let fixture: ComponentFixture<LineChartComponent>;
+describe('BibliotecaPageComponent', () => {
+  let component: BibliotecaPageComponent;
+  let fixture: ComponentFixture<BibliotecaPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LineChartComponent ]
+      declarations: [ BibliotecaPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LineChartComponent);
+    fixture = TestBed.createComponent(BibliotecaPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

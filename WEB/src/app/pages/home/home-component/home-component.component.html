@@ -1,33 +1,5 @@
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
-  <div class="container px-4 px-lg-5">
-    <a class="navbar-brand text-black fs-2" href="#page-top">BugiSoft</a>
-    <button
-      class="navbar-toggler navbar-toggler-right"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ms-auto my-2 my-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-black" href="#about">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black" href="#portfolio">Biblioteca</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black" href="#contact">Noticias</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<app-navigation></app-navigation>
 
 <!-- About-->
 <section class="page-section bg-primary border-bottom" id="about">
@@ -46,127 +18,7 @@
   </div>
 </section>
 
-<!-- Biblioteca-->
-<div id="portfolio">
-  <h2 class="text-center mt-5">Biblioteca</h2>
-  <div class="row gx-4 gx-lg-5 justify-content-center">
-    <div class="col-lg-8 text-center">
-      <p class="text-center text-black-75 mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-        aliquam commodi voluptate atque? Dolor corrupti, quod unde sapiente
-        necessitatibus ab quaerat sit dolore doloremque sequi doloribus, cum
-        deserunt iste suscipit?
-      </p>
-    </div>
-  </div>
-  <hr class="divider" />
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/thumbnails/1.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/1.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/fullsize/2.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/2.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/fullsize/3.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/3.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/fullsize/4.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/4.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/fullsize/5.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/5.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <a
-          class="portfolio-box"
-          href="../../../../assets/img/portfolio/fullsize/6.jpg"
-          title="Project Name"
-        >
-          <img
-            class="img-fluid"
-            src="../../../../assets/img/portfolio/thumbnails/6.jpg"
-            alt="..."
-          />
-          <div class="portfolio-box-caption p-3">
-            <div class="project-category text-white-50">Category</div>
-            <div class="project-name">Project Name</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- <app-biblioteca-juegos></app-biblioteca-juegos> -->
 
 <!-- Services-->
 <section class="page-section">
@@ -225,12 +77,4 @@
 <app-form-noticia></app-form-noticia>
 
 <!-- Footer-->
-<footer class="bg-light py-5">
-  <div class="container px-4 px-lg-5">
-    <div class="small text-center text-muted">
-      Copyright &copy; 2022 - BugiSoft
-    </div>
-  </div>
-</footer>
-
-
+<app-footer></app-footer>

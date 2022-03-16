@@ -9,17 +9,18 @@ import { ListBooksComponent } from './components/list-books/list-books.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BookService } from './services/book.service';
-import { CreateBookComponent } from './components/create-book/create-book.component';
 import { NgChartsModule } from 'ng2-charts';
-import { ChartComponent } from './pages/chart/chart.component';
-import { LineChartComponent } from './components/line-chart/line-chart.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { FaltasService } from './services/faltas.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormJuegoComponent } from './components/form-juego/form-juego.component';
 import { FormNoticiaComponent } from './components/form-noticia/form-noticia.component';
 import { NoticiaService } from './services/noicia.service';
+import { BibliotecaPageComponent } from './pages/home/biblioteca-page/biblioteca-page.component';
+import { ForbiddenUrlComponentComponent } from './components/forbidden-url-component/forbidden-url-component.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 @NgModule({
@@ -28,12 +29,12 @@ import { NoticiaService } from './services/noicia.service';
     HomeComponentComponent,
     InputFilterComponent,
     ListBooksComponent,
-    CreateBookComponent,
-    ChartComponent,
-    LineChartComponent,
-    BarChartComponent,
     FormJuegoComponent,
     FormNoticiaComponent,
+    BibliotecaPageComponent,
+    ForbiddenUrlComponentComponent,
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
