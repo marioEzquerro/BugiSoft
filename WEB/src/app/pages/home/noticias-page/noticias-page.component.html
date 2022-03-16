@@ -18,18 +18,18 @@
   <div class="container-fluid p-0">
     <div class="row g-0">
       <ng-container *ngFor="let Noticia of noticias">
-        <div class="col-lg-4 col-sm-6">
+        <div class="col-12">
           <a
             class="portfolio-box"
             href="../../../../assets/img/portfolio/thumbnails/1.jpg"
             [routerLink]="['noticias', Noticia.Id]"
-            title="Name"
+            title="{{ Noticia.nombre }}"
           >
-            <!-- src="../../../../assets/img/portfolio/thumbnails/1.jpg" -->
             <img
               class="img-fluid"
               src="assets/img/{{ Noticia.img }}"
               alt="..."
+              style="width: 100%"
             />
             <div class="portfolio-box-caption">
               <div class="project-name">{{ Noticia.nombre }}</div>
