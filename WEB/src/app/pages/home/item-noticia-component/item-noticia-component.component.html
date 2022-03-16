@@ -2,16 +2,19 @@
 
 <section class="py-5">
   <div class="container px-4 px-lg-5 my-5">
-    <div class="row gx-4 gx-lg-5 align-items-center">
-      <div class="col-md-6">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-8">
+        <h1 class="display-5 fw-bolder">{{ noticias?.nombre }}</h1>
+
         <img
-          class="card-img-top mb-5 mb-md-0"
+          class="card-img-top mb-5"
           src="assets/img/{{ noticias?.img }}"
           alt="..."
         />
-      </div>
-      <div class="col-md-6">
-        <h1 class="display-5 fw-bolder">{{ noticias?.nombre }}</h1>
+        <h4>{{ noticias?.descripcion_corta }}</h4>
+        <h6>Fecha de publicacion: {{ noticias?.fecha }}</h6>
+
+        <hr class="divider" />
 
         <p class="lead">{{ noticias?.descripcion }}</p>
       </div>
