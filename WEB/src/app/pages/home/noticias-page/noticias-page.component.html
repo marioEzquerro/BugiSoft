@@ -1,6 +1,8 @@
 <!-- Navigation -->
 <app-navigation class="mt-5"></app-navigation>
 <br /><br /><br /><br /><br /><br />
+
+
 <!-- Noticias-->
 <div id="portfolio">
   <h2 class="text-center">Noticias</h2>
@@ -8,13 +10,13 @@
     <div class="col-lg-8 text-center"></div>
   </div>
   <hr class="divider" />
+
   <div class="container-fluid p-0">
     <div class="row g-0">
       <ng-container *ngFor="let Noticia of noticias">
         <div class="col-12">
           <a
             class="portfolio-box"
-            href="../../../../assets/img/portfolio/thumbnails/1.jpg"
             [routerLink]="['/noticias/', Noticia.id]"
             title="{{ Noticia.nombre }}"
           >

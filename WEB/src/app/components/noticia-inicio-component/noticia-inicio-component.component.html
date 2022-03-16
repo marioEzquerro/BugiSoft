@@ -1,24 +1,22 @@
-<section class="page-section border-bottom" id="about">
+<section class="page-section" id="about">
   <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
-      <div class="col-lg-8 text-center">
-        <h1 class="text-black mt-0">Noticia del día</h1>
-        <hr class="divider divider-light" />
 
-        <div class="container-fluid p-0">
-          <div class="row g-0">
-            <div class="col-12">
-              <a class="portfolio-box" [routerLink]="['/noticias/', noticia?.id]" title="{{ noticia?.nombre }}">
-                <img class="img-fluid rounded" src="assets/img/{{ noticia?.img }}" alt="..." style="width: 60vw" />
-                <div class="portfolio-box-caption">
-                  <h4 class="h4 mb-2">{{ noticia?.nombre }}</h4>
-                  <div class="project-subtitle">
-                    {{ noticia?.descripcion_corta }}
-                  </div>
-                </div>
-              </a>
-            </div>
+      <div class="col-12 text-center">
+        <h1 class="text-black mt-0">Última noticia</h1>
+
+        <div class="row mt-5 pointer" [routerLink]="['/noticias/', noticia?.id]">
+          <div class="col-6 pt-5">
+            <h4 class="h4 mb-2">{{ noticia?.nombre }}</h4>
+            <p class="project-subtitle">{{ noticia?.descripcion_corta }}</p>
           </div>
+
+          <div class="col-6">
+            <a class="portfolio-box" title="{{ noticia?.nombre }}">
+              <img class="img-fluid rounded" src="assets/img/{{ noticia?.img }}" alt="..." style="width: 100%" />
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
